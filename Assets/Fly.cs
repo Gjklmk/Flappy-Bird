@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Fly : MonoBehaviour
 {
+    public GameManager  gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;
 
@@ -22,4 +23,12 @@ public class Fly : MonoBehaviour
 
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        gameManager.GameOver();
+    }
+
+
+
 }
