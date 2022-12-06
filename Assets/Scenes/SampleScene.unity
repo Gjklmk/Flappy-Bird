@@ -902,6 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 47290759}
   velocity: 1.5
+  chengdu: 9
 --- !u!50 &1950409244
 Rigidbody2D:
   serializedVersion: 4

@@ -7,6 +7,7 @@ public class Fly : MonoBehaviour
     public GameManager  gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;
+    public float chengdu = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,16 @@ public class Fly : MonoBehaviour
             rb.velocity = Vector2.up * velocity;
 
         }
+        transform.rotation = Quaternion.Euler(0,0,rb.velocity.y*chengdu);
     }
+
+
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameManager.GameOver();
     }
-
-
 
 }
